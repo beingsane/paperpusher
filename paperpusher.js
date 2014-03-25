@@ -198,10 +198,10 @@
 		this.each(function(){
 			var parent = $(this), html = "";
 			for(var i=0;i<settings.elements.length;i++){
-				if (field[elements[i].type]){
-					html += field[elements[i].type](elements[i]);
+				if (field[settings.elements[i].type]){
+					html += field[settings.elements[i].type](settings.elements[i]);
 				} else {
-					err("Cannot find field type: '"+elements[i].type+"'")
+					err("Cannot find field type: '"+settings.elements[i].type+"'")
 				}
 				if (settings.elements[i].events){
 					events(settings.elements[i])
